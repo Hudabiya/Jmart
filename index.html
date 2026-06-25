@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Mart - Premium Online Departmental Store</title>
+    <link rel="icon" type="image/png" href="img/logos/site-logo.png">
+    <link rel="stylesheet" href="mart.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        <p>Fast Home Delivery Available Across Karachi! Free delivery on orders above Rs. 2,000 </p>
+    </div>
+
+    <header>
+        <div class="navbar">
+            <div class="logo-container">
+                <img src="martlogo.jpg.jpeg" alt="J Mart Logo" class="site-logo-img">
+                <div class="logo-text">
+                    <h1 class="logo-title"><span class="logo-letter-j">J</span><span class="logo-text-mart">mart</span></h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#products">All Products</a></li>
+                    <li><a href="#about-store">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Your Ultimate Grocery Partner</h2>
+            <p >HAMESHA SE SASTA</p>
+            <a href="#products" class="btn">Explore Store Items</a>
+        </div>
+    </section>
+
+    <section id="categories" class="categories-nav">
+        <h2>Browse Departmental Categories</h2>
+        <div class="category-buttons">
+            <button class="cat-btn active" onclick="filterCategory('all')">All Departments</button>
+            <button class="cat-btn" onclick="filterCategory('grocery')">Groceries</button>
+            <button class="cat-btn" onclick="filterCategory('personal-care')">Personal Care</button>
+            <button class="cat-btn" onclick="filterCategory('snacks')">Snacks & Beverages</button>
+            <button class="cat-btn" onclick="filterCategory('household')">Household Essentials</button>
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="grocery">
+                <img src="basmatirice.jpg" alt="Falak Premium Basmati Rice"> 
+                <div class="card-body">
+                    <span class="badge">Grocery</span>
+                    <h3>Falak Premium Basmati Rice (5KG)</h3>
+                    <p class="price">Rs. 2615</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Falak Premium Basmati Rice (5KG)', 2615)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="grocery">
+                <img src="oil.jpg" alt="Canolive Premium Cooking Oil">
+                <div class="card-body">
+                    <span class="badge">Grocery</span>
+                    <h3>Canolive Premium Cooking Oil (5 Litre)</h3>
+                    <p class="price">Rs. 3510</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Canolive Premium Cooking Oil (5 Litre)', 3510)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="grocery">
+                <img src="aata.jpg" alt="Sunridge Chakki Atta">
+                <div class="card-body">
+                    <span class="badge">Grocery</span>
+                    <h3>Sunridge Chakki Atta (10KG)</h3>
+                    <p class="price">Rs. 1700</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Sunridge Chakki Atta (10KG)', 1700)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="grocery">
+                <img src="sugar.jpg" alt="Refined White Sugar"> 
+                <div class="card-body">
+                    <span class="badge">Grocery</span>
+                    <h3>Refined White Sugar (2KG)</h3>
+                    <p class="price">Rs. 890</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Refined White Sugar (2KG)', 890)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="grocery">
+                <img src="daal.jpg" alt="Daal Chana">
+                <div class="card-body">
+                    <span class="badge">Grocery</span>
+                    <h3>Daal Chana Premium (1KG)</h3>
+                    <p class="price">Rs. 499</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Daal Chana Premium (1KG)', 499)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="personal-care">
+            <img src="shampoo.jpg" alt="Himalaya Anti-Dandruff Shampoo">
+                <div class="card-body">
+                    <span class="badge">Personal Care</span>
+                    <h3>Himalaya Anti-Dandruff Shampoo (400ml)</h3>
+                    <p class="price">Rs. 1041</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Himalaya Anti-Dandruff Shampoo (400ml)', 1041 )">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="personal-care">
+                <img src="soap.jpg" alt="Dettol Antibacterial Soap">
+                <div class="card-body">
+                    <span class="badge">Personal Care</span>
+                    <h3>Dettol Antibacterial Soap (Value Pack)</h3>
+                    <p class="price">Rs. 521</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dettol Antibacterial Soap (Value Pack)', 521)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="personal-care">
+                <img src="toothpaste.jpg" alt="Colgate Max Fresh Toothpaste">
+                <div class="card-body">
+                    <span class="badge">Personal Care</span>
+                    <h3>Colgate Max Fresh Toothpaste (150g)</h3>
+                    <p class="price">Rs. 240</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Colgate Max Fresh Toothpaste (150g)', 240)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <img src="choclatechips.jpg" alt="Chocolate Chip Family Pack">
+                <div class="card-body">
+                    <span class="badge">Snacks</span>
+                    <h3>Chocolate Chip Family Pack</h3>
+                    <p class="price">Rs. 220</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Chocolate Chip Family Pack', 220)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <img src="Potatochips.jpg" alt="Potato Chips Crinkle">
+                <div class="card-body">
+                    <span class="badge">Snacks</span>
+                    <h3>Potato Crinkle (Large)</h3>
+                    <p class="price">Rs. 230</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Potato Crinkle (Large)', 230)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="beverages">
+                <img src="tapal.jpg" alt="Tapal Danedar Tea">
+                <div class="card-body">
+                    <span class="badge">Beverages</span>
+                    <h3>Tapal Danedar (430g)</h3>
+                    <p class="price">Rs. 950</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Tapal Danedar (430g)', 950)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="snacks">
+                <img src="slice.jpg" alt="Slice Mango Juice">
+                <div class="card-body">
+                    <span class="badge">Beverages</span>
+                    <h3> Slice Mango Juice (1 Litre)</h3>
+                    <p class="price">Rs. 280</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Slice Mango Juice (1 Litre)', 280)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="household">
+                <img src="surf.jpg" alt="Surf Excel Washing Powder">
+                <div class="card-body">
+                    <span class="badge">Household</span>
+                    <h3>Surf Excel Washing Powder(1KG)</h3>
+                    <p class="price">Rs. 540</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Surf Excel Washing Powder (1KG)', 540)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="household">
+                <img src="dishwash.jpg" alt="Max Ultra Liquid Dishwasher">
+                <div class="card-body">
+                    <span class="badge">Household</span>
+                    <h3>Max Ultra Liquid Dishwasher  (500ml)</h3>
+                    <p class="price">Rs. 479</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Max Ultra Liquid Dishwasher (500ml)', 479)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="household">
+                <img src="cleaner.jpg" alt="Dettol Lavender Floor Cleaner">
+                <div class="card-body">
+                    <span class="badge">Household</span>
+                    <h3>Dettol Lavender Floor Cleaner (1 Litre)</h3>
+                    <p class="price">Rs. 1273</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dettol Lavender Floor Cleaner (1 Litre)', 1273)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        
+        <div id="cart-items" class="cart-items-container">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+
+        <div class="checkout-form-container" id="checkout-form-block" style="display: none;">
+            <h4>Delivery & Payment Information</h4>
+            <div class="form-group">
+                <label for="cust-name">Full Name *</label>
+                <input type="text" id="cust-name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="cust-phone">WhatsApp Number *</label>
+                <input type="tel" id="cust-phone" placeholder="e.g., 03001234567">
+            </div>
+            <div class="form-group">
+                <label for="cust-address">Complete Delivery Address *</label>
+                <textarea id="cust-address" rows="2" placeholder="House/Flat number, Street name, Area, Karachi"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="cust-payment">Payment Method *</label>
+                <select id="cust-payment">
+                    <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+                    <option value="Bank Transfer / JazzCash / EasyPaisa">Bank Transfer / Mobile Wallet</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-price">
+                <span id="subtotal">Subtotal:</span>
+                <span class=" Rs.0"></span><span id="cart-total"> Rs. 0</span>
+            </div>
+            <button class="checkout-btn" onclick="sendOrderWhatsApp()"> Send Order via WhatsApp</button>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div id="about-store" class="footer-column about-box">
+                <img src="project.jpg.jpeg" alt="J Mart Brand Logo" class="large-brand-logo">
+                <p>J Mart is a premier retail departmental store dedicated to serving our local neighborhood with high-quality inventory control, fresh stock preservation, and rapid grocery supply networks.</p>
+            </div>
+            
+            <div class="footer-column contact-box">
+                <h3>Official Store Location</h3>
+                <p class="contact-detail"> <strong>Main Outlet:</strong> J Mart Commercial Facility</p>
+                <p class="contact-detail"> <strong>Street Address:</strong> Street#02, Moosa Lane Mirapir, Mooslane</p>
+                <p class="contact-detail"> <strong>Zone:</strong> Karachi, Pakistan.</p>
+            </div>
+
+            <div class="footer-column timing-box">
+                <h3>Operation Timings</h3>
+                <p> <strong>Monday - Sunday:</strong> 09:00 AM - 11:00 PM</p>
+                <p><strong>Delivery Dispatch:</strong> Fast home delivery dispatch cycles active.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 J Mart Mega Departmental Retailers. All corporate structure standards applied.</p>
+        </div>
+    </footer>
+
+    <script src="mart.js"></script>
+</body>
+</html>
